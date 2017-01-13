@@ -1,0 +1,60 @@
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=windows-1251">
+    <script type="text/javascript" src="jquery-2.2.4.min.js"></script>
+    <script type="text/javascript" src="pixi.js"></script>
+    <script type="text/javascript" src="animationFrame.js"></script>
+    <script type="text/javascript" src="nodes.js"></script>
+
+</head>
+<style>
+    body {
+        margin: 0;
+        background-color: transparent;
+    }
+/*    header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    content: ' ';
+    !*background: url(./img/bg_pattern.png);*!
+    background: #337ab7;
+}*/
+</style>
+<body>
+<header>
+    <script>
+        lowPerformance = function () {
+            var ua = navigator.userAgent.toLowerCase();
+            if (ua.indexOf("iphone") != -1 || ua.indexOf("mobile") != -1)
+                return true;
+
+            if ($(window).width() == 0)
+                return;
+
+            return ($(window).width() <= 480) ? true : false;
+        };
+        var ie = false;
+        var w = window,
+                d = document,
+                documentElement = d.documentElement,
+                body = d.getElementsByTagName('body')[0],
+                height = w.innerHeight|| documentElement.clientHeight|| body.clientHeight;
+        if (navigator.appName == 'Microsoft Internet Explorer') ie = true;
+            Nodes.multipleInit([{
+                "post_name": "ADSTERRA",
+                "drawnImage": (height>860)?"logo_header_mobile.png":"logo_header_mobile.png",
+                "linkTitle": "ADSTERRA",
+                "particleDensity": ie?"11":"7",
+                "particleWidth": "0.5",
+                "particleHeight": "0.5"
+            }]);
+    </script>
+</header>
+
+
+</body>
+</html>     
