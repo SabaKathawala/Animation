@@ -344,13 +344,7 @@ var Nodes = {
 			// pixi.js particles
 			//var texture = PIXI.Texture.fromImage("bunny.png");
 			var bunny = new PIXI.Sprite(this.texture);
-			if(i > this.points.length/2)
-			{
-				bunny.tint = 000000;
-			}
-			else {	
-				bunny.tint = 123456789;
-			}
+			bunny.tint = 000000;
 
 			bunny.scale = new PIXI.Point(this.scaleX, this.scaleY);
 			bunny.interactive = true;
